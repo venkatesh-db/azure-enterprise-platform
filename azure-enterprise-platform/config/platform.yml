@@ -1,0 +1,17 @@
+subscription_id: "ab9b448f-07ad-4039-b26d-e74b90b60272"
+resource_group: "rg-enterprise-platform"
+location: "eastus"
+
+network:
+  vnet: "my-vnet"
+  subnet: "my-subnet"
+
+storage:
+  account: "mystorageaccount2026"  # Updated to a unique name
+
+vmss:
+  name: "my-vmss"
+  capacity: 2
+
+vm:
+  size: "Standard_DS1_v2"

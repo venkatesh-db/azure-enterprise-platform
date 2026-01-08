@@ -1,0 +1,7 @@
+# Add your Python dependencies here
+azure-identity
+azure-keyvault-secrets
+azure-mgmt-compute
+azure-mgmt-network
+azure-mgmt-resource
+azure-mgmt-storage

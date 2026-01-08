@@ -1,0 +1,22 @@
+
+trigger:
+- main
+
+pool:
+  name: local-agent-pool
+
+steps:
+- script: |
+    echo "📦 Installing Dependencies"
+    python3 -m pip install --upgrade pip
+    pip3 install -r requirements.txt
+
+    echo "🌐 Running Network automation"
+    python3 python/network.py
+
+    echo "💾 Running Storage automation"
+    python3 python/storage.py
+
+    echo "🚀 Running VMSS automation"
+    python3 python/vmss.py
+  displayName: "Provision Azure Enterprise Platform"

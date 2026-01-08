@@ -1,0 +1,22 @@
+
+
+subscription_id: "<YOUR_SUBSCRIPTION_ID>"
+resource_group: "rg-enterprise-platform"
+location: "eastus"
+
+network:
+  vnet: "enterprise-vnet"
+  subnet: "app-subnet"
+
+vm:
+  size: "Standard_DS2_v2"
+
+vmss:
+  name: "enterprise-vmss"
+  capacity: 2
+
+storage:
+  account: "enterprisestorage123"
+
+keyvault:
+  name: "enterprise-kv"

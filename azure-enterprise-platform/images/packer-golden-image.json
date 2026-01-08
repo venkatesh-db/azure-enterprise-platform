@@ -1,0 +1,18 @@
+{
+  "builders": [{
+    "type": "azure-arm",
+    "managed_image_name": "golden-image-v1",
+    "managed_image_resource_group_name": "rg-enterprise-platform",
+    "location": "eastus",
+    "image_offer": "UbuntuServer",
+    "image_sku": "18.04-LTS",
+    "os_type": "Linux"
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "inline": [
+      "sudo apt update",
+      "sudo apt install -y nginx python3"
+    ]
+  }]
+}
